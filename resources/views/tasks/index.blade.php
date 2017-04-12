@@ -60,11 +60,14 @@
                       </td>
 
                       <td>
-                        <form action="/task/{{ $task->id }}" method="POST">
+                        <form action="{{ url('task/'.$task->id) }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('DELETE') }}
-                          <button class="btn btn-danger">Delete Task</button>
-                        </form>
+
+                          <button type="submit" id="delete-task-{{ $task->id }}" class="btn btn-danger">
+                            <i class="fa fa-btn fa-trash"></i>Delete Task
+                          </button>
+                        </form>                      
                       </td>
                     </tr>
                   @endforeach
