@@ -29,10 +29,9 @@
 - [Laravel Homestead](https://laravel.com/docs/5.1/homestead) (Pre-packaged Vagrant Box with tools needed for PHP-Laravel development)
 
 #### Useful commands
-`vagrant up  
-vagrant destroy --force  
-composer create-project laravel/laravel [project name] --prefer-dist  
-php artisan make:migration create_tasks_table --create=tasks  
-php artisan migrate  
-php artisan make:model Task  
-`
+`vagrant up`
+`vagrant destroy --force`
+`composer create-project laravel/laravel [project name] --prefer-dist`
+`php artisan make:migration create_tasks_table --create=tasks`
+`php artisan migrate`
+`php artisan make:model Task`
