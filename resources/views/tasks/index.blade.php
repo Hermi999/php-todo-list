@@ -63,7 +63,7 @@
                         <form action="/task/{{ $task->id }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('DELETE') }}
-                          <button class="btn btn-warning">Delete Task</button>
+                          <button class="btn btn-danger">Delete Task</button>
                         </form>
                       </td>
                     </tr>

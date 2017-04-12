@@ -17,13 +17,10 @@ use Illuminate\Http\Request;
 Route::get('/', 'TaskController@index');
 
 // Authentication Routes
-Route:auth();
+Auth::routes();
 
 // Task routes
 Route::get('/tasks', 'TaskController@index');
 Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

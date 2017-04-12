@@ -21,10 +21,12 @@
 
 #### Views
 - `layouts/app.blade.php` -> Standard layout of the app
-- `tasks.blade.php`   -> for displaying the tasks
-- `errors.blade.php`  -> for displaying errors
+- `tasks/index.blade.php`   -> for displaying the tasks
+- `common/errors.blade.php`  -> for displaying errors
 - `auth/login.blade.php`
 - `auth/register.blade.php`
+- `auth/passwords/email.blade.php`
+- `auth/passwords/reset.blade.php`
 
 #### Policies
 - TaskPolicy
