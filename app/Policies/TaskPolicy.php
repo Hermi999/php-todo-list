@@ -11,13 +11,13 @@ class TaskPolicy
     use HandlesAuthorization;
 
     /**
-     * Determine if the given user can delete the given task.
+     * Determine if the given user can edit given task.
      *
      * @param  User  $user
      * @param  Task  $task
      * @return bool
      */
-    public function destroy(User $user, Task $task)
+    public function edit(User $user, Task $task)
     {
         return $user->id === $task->user_id;
     }

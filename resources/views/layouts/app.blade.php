@@ -21,6 +21,7 @@
     </script>
 </head>
 <body>
+    <div id="notification-1" class="notification"></div>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">

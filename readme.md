@@ -46,6 +46,12 @@
 `composer create-project laravel/laravel [project name] --prefer-dist`  
 `php artisan make:migration create_tasks_table --create=tasks`  
 `php artisan migrate`  
+`php artisan migrate:rollback [--step=5]`
+`php artisan migrate:reset`
 `php artisan make:model Task`  
 `php artisan make:controller TaskController`  
 `php artisan make:policy TaskPolicy`  
+`npm run dev`  
+`npm run production`  
+`npm run watch` 
+`npm run watch-poll`  

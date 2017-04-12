@@ -48,6 +48,7 @@
               <table class="table table-striped task-table">
                 <thead>
                   <th>Task</th>
+                  <th>Resolved?</th>
                   <th>&nbsp;</th>
                 </thead>
 
@@ -59,6 +60,11 @@
                         <div>{{ $task->name }}</div>
                       </td>
 
+                      <td class="task-resolved-td">
+                        <input type="checkbox" id="{{'task-resolved-'.$task->id}}" class="task-resolved" data-taskid="{{$task->id}}" @if($task->resolved == 1) checked @endif>
+                      </td>
+
+                      <!-- Delete button -->
                       <td>
                         <form action="{{ url('task/'.$task->id) }}" method="POST">
                           {{ csrf_field() }}

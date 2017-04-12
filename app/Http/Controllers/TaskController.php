@@ -64,6 +64,25 @@ class TaskController extends Controller
     return redirect('/tasks');
   }
 
+
+  /**
+   * Update a certain task.
+   * 
+   * @param Request $request
+   * @param Task $task
+   * @return Response
+   */
+  public function update(Request $request, Task $task)
+  {
+    $this->authorize('edit', $task);
+    $task->resolved = ($request->resolved == "true");
+    $task->save();
+
+    return response()->json([
+      'resolved' => $task->resolved]);
+  }
+
+
   /**
    * Destroy the given task.
    *
@@ -74,7 +93,7 @@ class TaskController extends Controller
   public function destroy(Request $request, Task $task)
   {
     // 1.arg: name of policy method, 2.arg: model instance
-    $this->authorize('destroy', $task);
+    $this->authorize('edit', $task);
 
     $task->delete();
 

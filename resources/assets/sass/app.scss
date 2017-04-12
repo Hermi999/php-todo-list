@@ -7,3 +7,22 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+// custom css
+.notification{
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 150, 136, 0.91);
+  top: 65px;
+  height: 50px;
+  min-width: 200px;
+  right: 0px;
+  border-radius: 10px 0px 0px 10px;
+  color: white;
+  text-align: center;
+  padding: 13px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
