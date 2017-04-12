@@ -2,12 +2,16 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    /**
+     * Get all tasks for the user
+     */
+    public function tasks(){
+        return $this->hasMany(Task::class);
+    }
 
     /**
      * The attributes that are mass assignable.
